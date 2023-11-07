@@ -127,7 +127,7 @@ layout = html.Div(children=[
     className="g-0",
         )
     ],
-   fluid=False,
+   fluid=True,
 ),
 ])
 
