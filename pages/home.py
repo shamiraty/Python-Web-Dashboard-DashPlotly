@@ -14,18 +14,6 @@ import dash_ag_grid as dag
 dash.register_page(__name__,path='/',title="Plotly deep learning app",description="Deep learning simplified",image='logo2.png')
 # load data from github repository
 df = pd.read_csv('https://raw.githubusercontent.com/shamiraty/plotly-dashboard/main/demo2.csv')
-
-
-
-
-
-
-
-
-
-
-
-
 #descriptive analytics
 num_items = len(df)
 max_price = df['TotalPrice'].max()
@@ -52,7 +40,6 @@ fig1 = {
         }
     }
 }
-
 #plot2
 fig2=go.Figure(
     data=[go.Box(x=df["City"],y=df["Category"])],
@@ -78,18 +65,18 @@ layout = html.Div(children=[
                 dbc.Col(
                     dbc.Card(
                         dbc.CardBody([
-                            dbc.Alert(html.H5("Stock Items"),className="bg-light"),
-                            html.P("Products,UnitPrice,Total price",className="text-light"),
+                            dbc.Alert(html.H5("Stock Items"),className="bg-primary text-white"),
+                            html.P("Products,UnitPrice,Total price",className="text-primary"),
                             html.H6("Number of Items in Stock", className="card-title"),
                             html.H2(f"{num_items} items", className="card-text"),
-                        ],className="card shadow  bg-light")
+                        ],className="card shadow  ")
                     ),
                     width=3,
                 ),
                 dbc.Col(
                     dbc.Card(
                         dbc.CardBody([
-                            dbc.Alert(html.H5("Max Price"),className="bg-light"),
+                            dbc.Alert(html.H5("Max Price"),className="bg-primary text-white"),
                             html.P("Most High frequency Total-Price",className="text-primary"),
                             html.H6("Price USD", className="card-title"),
                             html.H2(f"${max_price:.2f}", className="card-text")
@@ -101,7 +88,7 @@ layout = html.Div(children=[
                     dbc.Card(
            
                         dbc.CardBody([
-                            dbc.Alert(html.H5("Min Price"),className="bg-light"),
+                            dbc.Alert(html.H5("Min Price"),className="bg-primary text-white"),
                             html.P("Most lower frequency TotalPrice",className="text-primary"),
                             html.H6("Price USD", className="card-title"),
                             html.H2(f"${min_price:.2f}", className="card-text")
@@ -112,7 +99,7 @@ layout = html.Div(children=[
                  dbc.Col(
                     dbc.Card(
                         dbc.CardBody([
-                            dbc.Alert(html.H5("Price Deviation"),className="bg-light"),
+                            dbc.Alert(html.H5("Price Deviation"),className="bg-primary text-white"),
                             html.P("Deviation btn Max and Min Total-Price",className="text-primary"),
                             html.H6("Price USD", className="card-title"),
                             html.H2(f"${price_difference:.2f}", className="card-text")
