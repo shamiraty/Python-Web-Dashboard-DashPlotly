@@ -104,7 +104,7 @@ layout = html.Div(children=[
                 [
                             dbc.Card(
                             dbc.CardBody([
-                            dbc.Alert("Correlation Coefficient"),                
+                            dbc.Alert("Correlation Coefficient",className="bg-primary text-light"),                
                             html.P("How Strong X influences Y",className="text-primary"),
                             html.H6("R", className="card-title"),
                             html.H4(score),
@@ -145,7 +145,7 @@ layout = html.Div(children=[
                     ),
                 ],
                 width=4,
-                className="mt-4"
+                className="mt-1"
             ),
          dbc.Col(            
                    dbc.Card(
@@ -156,7 +156,7 @@ layout = html.Div(children=[
                         ],className="mt-3"),className="mt-3"
                     ),
                 width=8,
-                className="mt-4"
+                className="mt-1"
             ),
         ],
     ), 
