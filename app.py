@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 from dash import html
 
 #https://bootswatch.com/united/
-app = dash.Dash(__name__,use_pages=True,external_stylesheets=[dbc.themes.SANDSTONE, dbc.icons.BOOTSTRAP],suppress_callback_exceptions=True)
+app = dash.Dash(__name__,use_pages=True,external_stylesheets=[dbc.themes.FLATLY, dbc.icons.BOOTSTRAP],suppress_callback_exceptions=True)
 server = app.server
 
 app.layout = html.Div(children=[
